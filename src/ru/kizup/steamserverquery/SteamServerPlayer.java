@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

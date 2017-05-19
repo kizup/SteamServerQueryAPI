@@ -1,16 +1,16 @@
 package SteamServerQueryAPI;
 import java.net.UnknownHostException;
 
-import SteamServerQuery.SteamServerInfo;
-import SteamServerQuery.SteamServerPlayer;
-import SteamServerQuery.SteamServerQuery;
+import ru.kizup.steamserverquery.SteamServerInfo;
+import ru.kizup.steamserverquery.SteamServerPlayer;
+import ru.kizup.steamserverquery.SteamServerQuery;
 
 
 public class SourceEngineServerInfo {
 	public static void main(String[] args) {		
 		try {
-			SteamServerQuery ServerQuery = new SteamServerQuery("0.0.0.0:27000");
-			/*SteamServerQuery ServerQuery = new SteamServerQuery("0.0.0.0", 27000);*/
+			SteamServerQuery ServerQuery = new SteamServerQuery("185.66.87.231:35100");
+			/*steamserverquery ServerQuery = new steamserverquery("0.0.0.0", 27000);*/
 			SteamServerInfo ServerInfo = ServerQuery.getInfo();
 			SteamServerPlayer ServerPlayer = ServerQuery.getPlayer();
 			

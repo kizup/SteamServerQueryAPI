@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 public class SteamServerType {
 	public static int DEDICATED = 100;

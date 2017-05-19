@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

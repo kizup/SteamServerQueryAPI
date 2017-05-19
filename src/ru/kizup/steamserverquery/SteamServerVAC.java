@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 public class SteamServerVAC {
 	public static int UNSECURED = 0;

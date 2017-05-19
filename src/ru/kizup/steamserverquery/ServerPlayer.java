@@ -1,11 +1,14 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
+/**
+ * Class contains common information about player
+ */
 public class ServerPlayer {
 	
-	public int PlayerIndex;
-	public String PlayerName;
-	public long PlayerScore;
-	public float PlayerDuration;
+	private int PlayerIndex;
+	private String PlayerName;
+	private long PlayerScore;
+	private float PlayerDuration;
 	
 	public ServerPlayer(int Index, String Name, long Score, float Duration) {
 		this.PlayerIndex = Index;

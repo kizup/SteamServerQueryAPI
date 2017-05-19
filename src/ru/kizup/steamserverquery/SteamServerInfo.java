@@ -1,8 +1,11 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+/**
+ * Class contains common info about steam server
+ */
 public class SteamServerInfo {
 	private int position = 0;
 	
@@ -27,22 +30,22 @@ public class SteamServerInfo {
 		this.ServerProtocol = Buffer[0];
 		
 		this.position++;
-		int ServerNameLength = this.getStringLenght(this.position, Buffer);
+		int ServerNameLength = this.getStringLength(this.position, Buffer);
 		this.ServerName = new byte[ServerNameLength];
 		System.arraycopy(Buffer, this.position, this.ServerName, 0, ServerNameLength);
 		
 		this.position = this.position + ServerNameLength + 1;
-		int ServerMapLength = this.getStringLenght(this.position, Buffer);
+		int ServerMapLength = this.getStringLength(this.position, Buffer);
 		this.ServerMap = new byte[ServerMapLength];
 		System.arraycopy(Buffer, this.position, this.ServerMap, 0, ServerMapLength);
 		
 		this.position = this.position + ServerMapLength + 1;
-		int ServerFolderLength = this.getStringLenght(this.position, Buffer);
+		int ServerFolderLength = this.getStringLength(this.position, Buffer);
 		this.ServerFolder = new byte[ServerFolderLength];
 		System.arraycopy(Buffer, this.position, this.ServerFolder, 0, ServerFolderLength);
 		
 		this.position = this.position + ServerFolderLength + 1;
-		int ServerGameLength = this.getStringLenght(this.position, Buffer);
+		int ServerGameLength = this.getStringLength(this.position, Buffer);
 		this.ServerGame = new byte[ServerGameLength];
 		System.arraycopy(Buffer, this.position, this.ServerGame, 0, ServerGameLength);
 		
@@ -71,7 +74,7 @@ public class SteamServerInfo {
 		this.ServerVAC = Buffer[this.position];
 		
 		this.position++;
-		int ServerVersionLength = getStringLenght(this.position, Buffer);
+		int ServerVersionLength = getStringLength(this.position, Buffer);
 		this.ServerVersion = new byte[ServerVersionLength];
 		System.arraycopy(Buffer, this.position, this.ServerVersion, 0, ServerVersionLength);
 		
@@ -139,7 +142,7 @@ public class SteamServerInfo {
 		return this.ServerEDF;
 	}
 	
-	private int getStringLenght(int start, byte[] buffer) {
+	private int getStringLength(int start, byte[] buffer) {
 		for (int i = start; i < buffer.length; i++) {
 			if (buffer[i] == 0)
 				return i - start;

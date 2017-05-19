@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 public class SteamServerEnvironment {
 	public static int LINUX = 108;

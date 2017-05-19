@@ -1,4 +1,4 @@
-package SteamServerQuery;
+package ru.kizup.steamserverquery;
 
 public class SteamServerVisibility {
 	public static int PUBLIC = 0;
